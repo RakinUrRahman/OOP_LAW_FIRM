@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.rakin.FinancialOfficerNewTransactionController">
+
+    <HBox alignment="CENTER_LEFT" prefHeight="60" spacing="15" style="-fx-background-color: #1abc9c;" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <padding>
+            <Insets left="20" />
+        </padding>
+        <children>
+            <Label style="-fx-text-fill: white;" text="Welcome, Financial Officer">
+                <font>
+                    <Font name="Segoe UI Bold" size="22" />
+                </font>
+            </Label>
+        </children>
+    </HBox>
+
+    <VBox prefWidth="180" spacing="12" style="-fx-background-color: #16a085;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="60">
+        <padding>
+            <Insets bottom="15" left="10" right="10" top="25" />
+        </padding>
+        <children>
+            <Button onAction="#ofDashboardButtonOnClick" text="Dashboard" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button onAction="#foClientPaymentHistoryButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Client Payment History" />
+            <Button onAction="#fogenerateReportPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Financial Reports" />
+            <Button onAction="#foapproveRejectPaymentPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Approve Payments" />
+            <Button onAction="#foupdateBillingRatesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Update Billing Rates" />
+            <Button onAction="#fomonitorDuesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Monitor Dues" />
+            <Button onAction="#fologTransactionsButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Log Transactions" />
+            <Button onAction="#foauditBillingErrorsButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Audit Billing" />
+            <Button onAction="#foexportFinancialsButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Export Statements" />
+            <Separator prefWidth="160" />
+            <Button onAction="#fologoutButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Logout" />
+        </children>
+    </VBox>
+
+    <AnchorPane style="-fx-background-color: #ecf0f1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+        <children>
+            <VBox layoutX="20.0" layoutY="20.0" spacing="20">
+                <Label text="Log New Transaction">
+                    <font>
+                        <Font name="Segoe UI Bold" size="22" />
+                    </font>
+                </Label>
+                 <Label text="Client ID:" />
+                 <TextField fx:id="foNewTransactionClientIdTF" prefWidth="200" />
+
+                 <Label text="Transaction Type:" />
+                 <ComboBox fx:id="foNewTransactionTypeCB" prefWidth="200">
+                     <items>
+                         <FXCollections fx:factory="observableArrayList">
+                             <String fx:value="Payment" />
+                             <String fx:value="Refund" />
+                             <String fx:value="Adjustment" />
+                         </FXCollections>
+                     </items>
+                 </ComboBox>
+
+                 <Label text="Amount ($):" />
+                 <TextField fx:id="foNewTransactionAmoutTF" prefWidth="200" />
+
+                 <Label text="Date:" />
+                 <DatePicker fx:id="foNewTransactionDatePicker" prefWidth="200" />
+
+                 <Label text="Notes (Optional):" />
+                 <TextArea fx:id="foNewTransactionNotesTA" prefHeight="80" prefWidth="300" />
+            </VBox>
+
+             <Button layoutX="554.0" layoutY="474.0" onAction="#foNewTransactionSubmitButtonOnClick" style="-fx-background-color: #2ecc71; -fx-text-fill: white;" text="Submit Transaction" />
+        </children>
+    </AnchorPane>
+</AnchorPane>

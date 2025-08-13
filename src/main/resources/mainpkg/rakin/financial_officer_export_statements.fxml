@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.rakin.FinancialOfficerExportStatementsController">
+
+    <HBox alignment="CENTER_LEFT" prefHeight="60" spacing="15" style="-fx-background-color: #1abc9c;" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <padding>
+            <Insets left="20" />
+        </padding>
+        <children>
+            <Label style="-fx-text-fill: white;" text="Welcome, Financial Officer">
+                <font>
+                    <Font name="Segoe UI Bold" size="22" />
+                </font>
+            </Label>
+        </children>
+    </HBox>
+
+    <VBox prefWidth="180" spacing="12" style="-fx-background-color: #16a085;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="60">
+        <padding>
+            <Insets bottom="15" left="10" right="10" top="25" />
+        </padding>
+        <children>
+            <Button onAction="#ofDashboardButtonOnClick" text="Dashboard" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button onAction="#foClientPaymentHistoryButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Client Payment History" />
+            <Button onAction="#fogenerateReportPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Financial Reports" />
+            <Button onAction="#foapproveRejectPaymentPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Approve Payments" />
+            <Button onAction="#foupdateBillingRatesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Update Billing Rates" />
+            <Button onAction="#fomonitorDuesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Monitor Dues" />
+            <Button onAction="#fologTransactionsButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Log Transactions" />
+            <Button onAction="#foauditBillingErrorsButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Audit Billing" />
+            <Button onAction="#foexportFinancialsButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Export Statements" />
+            <Separator prefWidth="160" />
+            <Button onAction="#fologoutButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Logout" />
+        </children>
+    </VBox>
+
+    <AnchorPane style="-fx-background-color: #ecf0f1;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="60">
+        <VBox spacing="20" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+
+            <Label text="Export Financial Statements">
+                <font>
+                    <Font name="Segoe UI Bold" size="22" />
+                </font>
+            </Label>
+
+            <TableView fx:id="financialExportTable" prefHeight="420" prefWidth="850">
+                <columns>
+                    <TableColumn fx:id="statementIdCol" prefWidth="100" text="foExportStatementsIdCol" />
+                    <TableColumn fx:id="periodCol" prefWidth="200" text="foExportStatementsPeriodCol" />
+                    <TableColumn fx:id="generatedDateCol" prefWidth="150" text="foExportStatementsGeneratedOnCol" />
+                    <TableColumn fx:id="totalAmountCol" prefWidth="120" text="foExportStatementsAmountCol" />
+                    <TableColumn fx:id="exportStatusCol" prefWidth="120" text="foExportStatementsStatusCol" />
+                </columns>
+            </TableView>
+
+            <HBox spacing="10">
+                <Button onAction="#foExportStatementsExportButtonOnClick" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Export " />
+            </HBox>
+        </VBox>
+    </AnchorPane>
+
+</AnchorPane>

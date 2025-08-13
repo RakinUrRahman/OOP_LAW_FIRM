@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.rakin.FinancialOfficerFinancialReportController">
+
+    <HBox alignment="CENTER_LEFT" prefHeight="60" spacing="15" style="-fx-background-color: #1abc9c;" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <padding>
+            <Insets left="20" />
+        </padding>
+        <children>
+            <Label style="-fx-text-fill: white;" text="Welcome, Financial Officer">
+                <font>
+                    <Font name="Segoe UI Bold" size="22" />
+                </font>
+            </Label>
+        </children>
+    </HBox>
+
+    <VBox prefWidth="180" spacing="12" style="-fx-background-color: #16a085;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="60">
+        <padding>
+            <Insets bottom="15" left="10" right="10" top="25" />
+        </padding>
+        <children>
+            <Button onAction="#ofDashboardButtonOnClick" text="Dashboard" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button onAction="#foClientPaymentHistoryButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Client Payment History" />
+            <Button onAction="#fogenerateReportPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Financial Reports" />
+            <Button onAction="#foapproveRejectPaymentPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Approve Payments" />
+            <Button onAction="#foupdateBillingRatesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Update Billing Rates" />
+            <Button onAction="#fomonitorDuesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Monitor Dues" />
+            <Button onAction="#fologTransactionsButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Log Transactions" />
+            <Button onAction="#foauditBillingErrorsButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Audit Billing" />
+            <Button onAction="#foexportFinancialsButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Export Statements" />
+            <Separator prefWidth="160" />
+            <Button onAction="#fologoutButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Logout" />
+        </children>
+    </VBox>
+
+    <AnchorPane style="-fx-background-color: #ecf0f1;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="60">
+        <children>
+            <VBox spacing="15" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
+
+                <Label text="Generate Financial Report">
+                    <font>
+                        <Font size="24" />
+                    </font>
+                </Label>
+
+                <HBox spacing="20">
+                    <Label text="Select Month:" />
+                    <ComboBox fx:id="foGenerateFinancialReportMonthComboBox" prefWidth="150" promptText="Month" />
+                    <Label text="Select Year:" />
+                    <TextField fx:id="foGenerateFinancialReportYearTF" prefWidth="80" promptText="Year" />
+                    <Button onAction="#foGenerateFinancialReportGenerateButtonOnClick" text="Generate" />
+                </HBox>
+
+                <TableView fx:id="foGenerateFinancialReportTV" prefHeight="350">
+                    <columns>
+                        <TableColumn fx:id="foGenerateFinancialReportClientCol" prefWidth="183.99993896484375" text="Client" />
+                        <TableColumn fx:id="foGenerateFinancialReportAmountCol" prefWidth="144.80007934570312" text="Amount" />
+                        <TableColumn fx:id="foGenerateFinancialReportDateCol" prefWidth="168.0" text="Date" />
+                        <TableColumn fx:id="foGenerateFinancialReportStatusCol" prefWidth="183.99993896484375" text="Status" />
+                    </columns>
+                </TableView>
+
+                <HBox alignment="CENTER_RIGHT" spacing="10">
+                    <Button onAction="#foGenerateFinancialReportExportButtonOnClick" text="Export" />
+                </HBox>
+
+            </VBox>
+        </children>
+    </AnchorPane>
+
+</AnchorPane>
