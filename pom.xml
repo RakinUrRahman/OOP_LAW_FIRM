@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>rakin</groupId>
-    <artifactId>OOP_Law_FIRM</artifactId>
+    <artifactId>Law_Firm_OOP</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>OOP_Law_FIRM</name>
+    <name>Law_Firm_OOP</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>mainpkg.rakin.mainpkg/mainpkg.HelloApplication</mainClass>
+                            <mainClass>mainpkg.lawfirm.rakin.law_firm_oop/mainpkg.lawfirm.HelloApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

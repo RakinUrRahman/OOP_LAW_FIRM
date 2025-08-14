@@ -1,5 +1,9 @@
 package mainpkg.lawfirm.rakin;
+<<<<<<< Updated upstream
 import mainpkg.lawfirm.user;
+=======
+import mainpkg.user;
+>>>>>>> Stashed changes
 
 import java.time.LocalDate;
 import java.util.Random;
