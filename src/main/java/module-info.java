@@ -1,14 +1,14 @@
-module mainpkg.rakin.mainpkg {
+module mainpkg.lawfirm {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
+    opens mainpkg.lawfirm to javafx.fxml;
 
-    opens mainpkg to javafx.fxml;
+    opens mainpkg.lawfirm.rakin to javafx.fxml, javafx.base;
+    opens mainpkg.lawfirm.arafat to javafx.fxml, javafx.base;
+    opens mainpkg.lawfirm.turan to javafx.fxml, javafx.base;
+    opens mainpkg.lawfirm.ronon to javafx.fxml, javafx.base;
 
-    opens mainpkg.rakin to javafx.fxml, javafx.base;
-    opens mainpkg.arafat to javafx.fxml, javafx.base;
-    opens mainpkg.turan to javafx.fxml, javafx.base;
-    opens mainpkg.ronon to javafx.fxml, javafx.base;
-
-    exports mainpkg;
+    exports mainpkg.lawfirm;
 }
