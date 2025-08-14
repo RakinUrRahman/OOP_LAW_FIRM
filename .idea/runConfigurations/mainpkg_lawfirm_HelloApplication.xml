@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="HelloApplication" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="MAIN_CLASS_NAME" value="mainpkg.HelloApplication" />
+  <configuration default="false" name="mainpkg.lawfirm.HelloApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="mainpkg.lawfirm.HelloApplication" />
     <module name="Law_Firm_OOP" />
     <extension name="coverage">
       <pattern>
