@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="510.0" prefWidth="566.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.ronon.officeadmin_Schedulemeeting">
+    <children>
+        <Text layoutX="171.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schedule Client - Lawyer Meeting">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Text>
+        <Text layoutX="85.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client: " wrappingWidth="61.06365966796875">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <ComboBox fx:id="clientComboBox" layoutX="150.0" layoutY="74.0" prefWidth="150.0" />
+        <Text layoutX="85.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lawyer:" wrappingWidth="61.06365966796875">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <ComboBox fx:id="lawyerComboBox" layoutX="150.0" layoutY="109.0" prefWidth="150.0" />
+        <DatePicker fx:id="dateDatePicker" layoutX="150.0" layoutY="147.0" />
+        <Text layoutX="85.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" wrappingWidth="61.06365966796875">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="85.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time:" wrappingWidth="61.06365966796875">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <TextField fx:id="timeTextField" layoutX="150.0" layoutY="187.0" />
+        <Text layoutX="26.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meeting type: " wrappingWidth="123.46365356445312">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <ComboBox fx:id="meetingTypeComboBox" layoutX="150.0" layoutY="228.0" prefWidth="150.0" promptText="In person/ Virtual" />
+        <TableView fx:id="meetingTableView" layoutX="68.0" layoutY="310.0" prefHeight="200.0" prefWidth="464.0">
+            <columns>
+                <TableColumn fx:id="clientCol" prefWidth="75.0" text="Client" />
+                <TableColumn fx:id="lawyerCol" prefWidth="75.0" text="Lawyer" />
+                <TableColumn fx:id="dateCol" prefWidth="75.0" text="Date" />
+                <TableColumn fx:id="timeCol" prefWidth="107.20001220703125" text="TIme" />
+                <TableColumn fx:id="meetingTypeCol" prefWidth="129.60000610351562" text="Meeting Type" />
+            </columns>
+        </TableView>
+        <Label fx:id="outputLabel" layoutX="54.0" layoutY="277.0" prefHeight="18.0" prefWidth="438.0" />
+        <Button layoutX="349.0" layoutY="228.0" mnemonicParsing="false" onAction="#scheduleMeetingOnClickedButton" text="Schedule Meeting" />
+        <Line endX="266.00006103515625" endY="7.62939453125E-6" layoutX="300.0" layoutY="58.0" startX="-300.0" startY="7.62939453125E-6" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.ronon.Officeadmindb">
+    <children>
+        <VBox prefHeight="120.0" prefWidth="670.0" style="-fx-background-color: skyblue;" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label text="Office Administor">
+                    <font>
+                        <Font name="System Bold" size="42.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="180.0" top="10.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+        <Button layoutX="14.0" layoutY="144.0" mnemonicParsing="false" onAction="#handleManageStaffOnClicked" prefHeight="26.0" prefWidth="131.0" text="Manage Staff" />
+        <Button layoutX="14.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleUpdateCaseStatusOnClicked" prefHeight="26.0" prefWidth="131.0" text="Update Case Status" />
+        <Button layoutX="14.0" layoutY="189.0" mnemonicParsing="false" onAction="#handleScheduleMeetingsOnClicked" prefHeight="26.0" prefWidth="131.0" text="Schedule Meeting" />
+        <Button layoutX="14.0" layoutY="238.0" mnemonicParsing="false" onAction="#handleInventoryOnClicked" prefHeight="26.0" prefWidth="131.0" text="Inventory" />
+        <Button layoutX="14.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleManageCalendarOnClicked" prefHeight="26.0" prefWidth="131.0" text="Manage Calendar" />
+        <Button layoutX="14.0" layoutY="373.0" mnemonicParsing="false" onAction="#handleGenerateReportsOnClicked" prefHeight="26.0" prefWidth="131.0" text="Genarate Report" />
+        <Button layoutX="14.0" layoutY="414.0" mnemonicParsing="false" onAction="#handlePostNoticeOnClicked" prefHeight="26.0" prefWidth="131.0" text="Post Notice" />
+        <Button layoutX="14.0" layoutY="457.0" mnemonicParsing="false" onAction="#handleStaffRecordOnClicked" prefHeight="26.0" prefWidth="131.0" text="Staff Record" />
+        <Line endX="414.00006103515625" endY="-15.399993896484375" layoutX="256.0" layoutY="135.0" startX="-256.0" startY="-15.399993896484375" />
+        <Line endX="-129.5" endY="345.0" layoutX="297.0" layoutY="225.0" startX="-129.5" startY="-104.89999389648438" />
+    </children>
+</AnchorPane>

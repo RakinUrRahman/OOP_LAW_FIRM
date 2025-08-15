@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.ronon.officeadmin_Managecalendar">
+    <children>
+        <Label layoutX="192.0" layoutY="23.0" text="Office Calendar and Legal Deadlines">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Line endX="206.20001220703125" endY="7.62939453125E-6" layoutX="291.0" layoutY="50.0" startX="-100.0" />
+        <Label layoutX="120.0" layoutY="75.0" text="Scheduled Events">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TableView fx:id="eventTableView" layoutX="14.0" layoutY="107.0" prefHeight="200.0" prefWidth="298.0">
+            <columns>
+                <TableColumn fx:id="eventTitleCol" prefWidth="75.0" text="Event Title" />
+                <TableColumn fx:id="dateCol" prefWidth="75.0" text="Date" />
+                <TableColumn fx:id="timeCol" prefWidth="75.0" text="Time" />
+                <TableColumn fx:id="tagCol" prefWidth="75.0" text="Tag" />
+            </columns>
+        </TableView>
+        <Label layoutX="419.0" layoutY="75.0" text="Add/Edit Calendar Entry">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TextField fx:id="eventTitleTextFiled" layoutX="423.0" layoutY="107.0" />
+        <Text layoutX="358.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Title" />
+        <DatePicker fx:id="dateLocalDatePicker" layoutX="423.0" layoutY="142.0" />
+        <Text layoutX="358.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" />
+        <Text layoutX="361.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time:" />
+        <TextField fx:id="timeTextField" layoutX="424.0" layoutY="171.0" />
+        <Text layoutX="364.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tag:" />
+        <TextField fx:id="tagTextfield" layoutX="423.0" layoutY="203.0" />
+        <Button layoutX="387.0" layoutY="252.0" mnemonicParsing="false" onAction="#addEventOnClickedButton" text="Add Event" />
+        <Button layoutX="485.0" layoutY="252.0" mnemonicParsing="false" onAction="#deleteSelected" text="Delete Selected" />
+        <Label fx:id="outputLabel" layoutX="361.0" layoutY="299.0" prefHeight="68.0" prefWidth="247.0" />
+    </children>
+</AnchorPane>
