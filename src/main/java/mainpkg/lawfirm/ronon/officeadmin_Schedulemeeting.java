@@ -7,7 +7,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class office_Schedulemeeting {
+public class officeadmin_Schedulemeeting {
     @javafx.fxml.FXML
     private ComboBox<String> lawyerComboBox;
     @javafx.fxml.FXML

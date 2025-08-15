@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.ronon.paralegal_Research">
+    <children>
+        <Label layoutX="177.0" layoutY="14.0" text="Research Case Law">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Line endX="231.0" endY="-1.1444091796875E-5" layoutX="243.0" layoutY="41.0" startX="-242.99996948242188" startY="-1.1444091796875E-5" />
+        <TextField fx:id="keyWordTextField" layoutX="57.0" layoutY="56.0" promptText="Enter Keyword" />
+        <Button layoutX="217.0" layoutY="56.0" mnemonicParsing="false" onAction="#searchOnButtonClicked" text="Search" />
+        <Text layoutX="34.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year: " />
+        <ComboBox fx:id="yearComboBox" layoutX="63.0" layoutY="90.0" prefWidth="150.0" />
+        <Text layoutX="17.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jurisdiction:" />
+        <ComboBox fx:id="jurisdictionComboBox" layoutX="92.0" layoutY="118.0" prefWidth="150.0" />
+        <Text layoutX="26.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" />
+        <ComboBox fx:id="typeComboBox" layoutX="79.0" layoutY="146.0" prefWidth="150.0" />
+        <Label layoutX="35.0" layoutY="183.0" text="Top 3 Result:" />
+        <VBox layoutX="117.0" layoutY="183.0" prefHeight="62.0" prefWidth="353.0">
+            <children>
+                <Label fx:id="resultLabel1" prefHeight="18.0" prefWidth="343.0" text="Result 1 show here" />
+                <Label fx:id="resultLabel2" prefHeight="18.0" prefWidth="342.0" text="Result 2 show here" />
+                <Label fx:id="resultLabel3" prefHeight="18.0" prefWidth="342.0" text="Result 3 show here" />
+            </children>
+        </VBox>
+        <TextArea fx:id="noteTextArea" layoutX="67.0" layoutY="245.0" prefHeight="116.0" prefWidth="200.0" />
+        <Text layoutX="25.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note:" />
+        <Button layoutX="280.0" layoutY="336.0" mnemonicParsing="false" onAction="#saveOnButtonClicked" text="Save Notes" />
+        <Label fx:id="outputLabel" layoutX="65.0" layoutY="369.0" prefHeight="18.0" prefWidth="201.0" />
+    </children>
+</AnchorPane>

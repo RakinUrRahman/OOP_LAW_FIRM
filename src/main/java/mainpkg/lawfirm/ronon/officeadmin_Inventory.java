@@ -32,6 +32,7 @@ public class officeadmin_Inventory
 
     ArrayList<officeadmin_InventoryItem> inventoryItemsList = new ArrayList<>();
 
+
     @javafx.fxml.FXML
     public void initialize() {
 
@@ -41,6 +42,8 @@ public class officeadmin_Inventory
         dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
 
         vendorComboBox.getItems().addAll("Vendor 1", "Vendor 2", "Vendor 3");
+
+
 
     }
 

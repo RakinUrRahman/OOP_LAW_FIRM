@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="347.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.ronon.paralegal_Draft">
+    <children>
+        <Label layoutX="317.0" layoutY="13.0" text="Draft Legal Document">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Text layoutX="31.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Document Type: " />
+        <ComboBox fx:id="documentTypeComboBox" layoutX="131.0" layoutY="53.0" prefWidth="150.0" />
+        <Text layoutX="53.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client Name: " />
+        <TextField fx:id="clientTextField" layoutX="132.0" layoutY="88.0" />
+        <Text layoutX="78.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Case ID:" />
+        <TextField fx:id="caseIdTextFile" layoutX="132.0" layoutY="123.0" />
+        <Text layoutX="78.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date: " />
+        <DatePicker fx:id="dateLocalDatePicker" layoutX="125.0" layoutY="152.0" />
+        <Text layoutX="38.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clauses/Terms:" />
+        <TextArea fx:id="termsTextArea" layoutX="131.0" layoutY="183.0" prefHeight="70.0" prefWidth="200.0" />
+        <Button layoutX="290.0" layoutY="253.0" mnemonicParsing="false" onAction="#saveButtonOnClicked" text="Save" />
+
+        <Label fx:id="outputLabel" layoutX="37.0" layoutY="292.0" prefHeight="18.0" prefWidth="324.0" />
+        <Line endX="550.0000610351562" endY="1.1444091796875E-5" layoutX="271.0" layoutY="41.0" startX="-271.0" startY="7.62939453125E-6" />
+        <TableView fx:id="draftTableView" layoutX="361.0" layoutY="52.0" prefHeight="200.0" prefWidth="428.0">
+            <columns>
+                <TableColumn fx:id="docTypeCol" prefWidth="105.59997940063477" text="Document Type " />
+                <TableColumn fx:id="clientCol" prefWidth="73.60003662109375" text="Client " />
+                <TableColumn fx:id="caseIdCol" prefWidth="75.0" text="Case ID" />
+                <TableColumn fx:id="dateCol" prefWidth="75.0" text="Date" />
+                <TableColumn fx:id="termsCol" prefWidth="95.199951171875" text="Terms" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

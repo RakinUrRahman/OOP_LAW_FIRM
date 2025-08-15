@@ -1,27 +1,24 @@
 package mainpkg.lawfirm.ronon;
 
-
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import mainpkg.lawfirm.HelloApplication;
 
-public class Officeadmindb
+public class Paralegaldb
 {
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-
     @javafx.fxml.FXML
-    public void handlePostNoticeOnClicked(ActionEvent actionEvent) {
+    public void casenNoteTrackOnButtonClicked(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/officeadmin_notice.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/paralegal_note.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage nextStage = new Stage();
-            nextStage.setTitle("Notice !");
+            nextStage.setTitle("note !");
             nextStage.setScene(scene);
             nextStage.show();
         }
@@ -31,12 +28,12 @@ public class Officeadmindb
     }
 
     @javafx.fxml.FXML
-    public void handleStaffRecordOnClicked(ActionEvent actionEvent) {
+    public void draftDoccumentOnButtonClicked(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/officeadmin_staffrecord.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/paralegal_draft.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage nextStage = new Stage();
-            nextStage.setTitle("staff record!");
+            nextStage.setTitle("draft !");
             nextStage.setScene(scene);
             nextStage.show();
         }
@@ -46,12 +43,12 @@ public class Officeadmindb
     }
 
     @javafx.fxml.FXML
-    public void handleGenerateReportsOnClicked(ActionEvent actionEvent) {
+    public void clientRecordOnButtonClicked(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/officeadmin_genaratereport.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/paralegal_clientrecord.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage nextStage = new Stage();
-            nextStage.setTitle("genarate report!");
+            nextStage.setTitle("client record !");
             nextStage.setScene(scene);
             nextStage.show();
         }
@@ -61,57 +58,12 @@ public class Officeadmindb
     }
 
     @javafx.fxml.FXML
-    public void handleManageCalendarOnClicked(ActionEvent actionEvent) {
+    public void caseReportOnButtonClicked(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/officeadmin_managecalendar.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/paralegal_courtfiling.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage nextStage = new Stage();
-            nextStage.setTitle("Manage Calendar!");
-            nextStage.setScene(scene);
-            nextStage.show();
-        }
-        catch (Exception e) {
-
-        }
-    }
-
-    @javafx.fxml.FXML
-    public void handleUpdateCaseStatusOnClicked(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/officeadmin_casestatus.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            Stage nextStage = new Stage();
-            nextStage.setTitle("Case Status!");
-            nextStage.setScene(scene);
-            nextStage.show();
-        }
-        catch (Exception e) {
-
-        }
-    }
-
-    @javafx.fxml.FXML
-    public void handleScheduleMeetingsOnClicked(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/officeadmin_schedulemeeting.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            Stage nextStage = new Stage();
-            nextStage.setTitle("Schedule Meeting !");
-            nextStage.setScene(scene);
-            nextStage.show();
-        }
-        catch (Exception e) {
-
-        }
-    }
-
-    @javafx.fxml.FXML
-    public void handleInventoryOnClicked(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/officeadmin_inventory.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            Stage nextStage = new Stage();
-            nextStage.setTitle("Inventory !");
+            nextStage.setTitle("Court Filling !");
             nextStage.setScene(scene);
             nextStage.show();
         }
@@ -122,12 +74,57 @@ public class Officeadmindb
     }
 
     @javafx.fxml.FXML
-    public void handleManageStaffOnClicked(ActionEvent actionEvent) {
+    public void courtCalendarOnButtonClicked(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/officeadmin_staffmanage.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/paralegal_courtcalendar.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage nextStage = new Stage();
-            nextStage.setTitle("Staff Manage !");
+            nextStage.setTitle("Court Calendar !");
+            nextStage.setScene(scene);
+            nextStage.show();
+        }
+        catch (Exception e) {
+
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void casePreparationOnButtonClicked(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/paralegal_case.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage nextStage = new Stage();
+            nextStage.setTitle("Case !");
+            nextStage.setScene(scene);
+            nextStage.show();
+        }
+        catch (Exception e) {
+
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void clientCommunicationOnButtonClicked(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/paralegal_Communication.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage nextStage = new Stage();
+            nextStage.setTitle("Communation !");
+            nextStage.setScene(scene);
+            nextStage.show();
+        }
+        catch (Exception e) {
+
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void researchCaseOnButtonClicked(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/mainpkg/lawfirm/ronon/paralegal_research.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage nextStage = new Stage();
+            nextStage.setTitle("Research !");
             nextStage.setScene(scene);
             nextStage.show();
         }
