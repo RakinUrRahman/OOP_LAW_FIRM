@@ -1,13 +1,18 @@
 package mainpkg.lawfirm.rakin;
 
-public class Lawyer_Case {
+import java.io.Serial;
+import java.io.Serializable;
+
+public class Lawyer_Case implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
     private String caseId;
     private String caseName;
     private String clientName;
     private String caseType;
     private String description;
     private String lawyer;
-    private String status;
 
     public Lawyer_Case(String caseName, String clientName, String caseType, String description, String lawyer) {
         this.caseId = generateCaseId();
@@ -16,7 +21,7 @@ public class Lawyer_Case {
         this.caseType = caseType;
         this.description = description;
         this.lawyer = lawyer;
-        this.status = "Pending";
+
     }
 
     private String generateCaseId() {
@@ -73,24 +78,17 @@ public class Lawyer_Case {
         this.lawyer = lawyer;
     }
 
-    public String getStatus() {
-        return status;
-    }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
 
     @Override
-    public String toString() {
+    public  String toString() {
         return
                 "caseId='" + caseId + '\n' +
-                ", caseName='" + caseName + '\n' +
-                ", clientName='" + clientName + '\n' +
-                ", caseType='" + caseType + '\n' +
-                ", description='" + description + '\n' +
-                ", lawyer='" + lawyer + '\n' +
-                ", status='" + status + '\n' +
+                " caseName='" + caseName + '\n' +
+                " clientName='" + clientName + '\n' +
+                " caseType='" + caseType + '\n' +
+                " description='" + description + '\n' +
+                " lawyer='" + lawyer + '\n' +
                 '}';
     }
 }

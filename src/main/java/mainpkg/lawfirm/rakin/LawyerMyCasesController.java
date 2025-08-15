@@ -1,77 +1,115 @@
 package mainpkg.lawfirm.rakin;
 
-
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-import java.io.*;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-
-public class LawyerCreateCaseController {
+public class LawyerMyCasesController
+{
     @javafx.fxml.FXML
-    private ComboBox<String> lawyerCB;
+    private TableView<Lawyer_Case> lawyerMyCasesTV;
     @javafx.fxml.FXML
-    private TextField caseNameTF;
+    private AnchorPane mainContentPane;
     @javafx.fxml.FXML
-    private ComboBox<String> caseTypeCB;
-    @javafx.fxml.FXML
-    private TextArea descriptionTA;
-    @javafx.fxml.FXML
-    private TextField clientNameTF;
-    ArrayList<Lawyer_Case> arrayList = new ArrayList<>();
+    private TextField lawyerSearchCaseIdTF;
     @javafx.fxml.FXML
     private TextArea outputTA;
-    private static final String FILE_NAME = "cases.dat";
+    @javafx.fxml.FXML
+    private TableColumn<Lawyer_Case, String> caseNameCol;
+    @javafx.fxml.FXML
+    private TableColumn<Lawyer_Case, String>  statusCol;
+    @javafx.fxml.FXML
+    private TableColumn<Lawyer_Case, String>  clientNameCol;
+    @javafx.fxml.FXML
+    private TableColumn<Lawyer_Case, String>  caseIdCol;
+    @javafx.fxml.FXML
+    private TableColumn <Lawyer_Case, String> lawyerCol;
+    @javafx.fxml.FXML
+    private TableColumn <Lawyer_Case, String> caseTypeCol;
+    @javafx.fxml.FXML
+    private TableColumn <Lawyer_Case, String> descriptionCol;
+
+
+    ObservableList<Lawyer_Case> tableData = FXCollections.observableArrayList();
+    public static ArrayList<Lawyer_Case> globalCasesList = new ArrayList<>();
+    private static final String FILE_NAME = System.getProperty("user.home") + "/cases.dat";
+
+
 
     @javafx.fxml.FXML
     public void initialize() {
 
-        caseTypeCB.getItems().addAll("Criminal", "Civil", "Corporate", "Family");
-        lawyerCB.getItems().addAll("Arafat", "Rakin", "Turan", "Ronon");
+        caseIdCol.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("caseId"));
+        caseNameCol.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("caseName"));
+        clientNameCol.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("clientName"));
+        caseTypeCol.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("caseType"));
+        descriptionCol.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("description"));
+        lawyerCol.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("lawyer"));
 
-
+        lawyerMyCasesTV.setItems(tableData);
     }
+
+
 
 
     @javafx.fxml.FXML
-    public void submitButtonOnClick(ActionEvent actionEvent) {
+    public void loadAllCasesButtonOnClick(ActionEvent actionEvent) {
+        tableData.clear();
+        tableData.addAll(LawyerMyCasesController.globalCasesList);
+        outputTA.setText("Loaded " + tableData.size() + " cases from memory.");
+    }
 
-
-        String caseName = caseNameTF.getText();
-        String clientName = clientNameTF.getText();
-        String caseType = caseTypeCB.getValue();
-        String description = descriptionTA.getText();
-        String lawyer = lawyerCB.getValue();
-
-        if (caseName.isEmpty() || clientName.isEmpty() || caseType.isEmpty() || description.isEmpty() || lawyer.isEmpty()) {
-
-
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Please Fill the fields");
-            alert.showAndWait();
+    @FXML
+    public void searchButtonOnClick(ActionEvent actionEvent) {
+        String searchText = lawyerSearchCaseIdTF.getText().trim().toLowerCase();
+        if (searchText.isEmpty()) {
+            outputTA.setText("Enter Case ID or Case Name to search.");
             return;
         }
 
-        Lawyer_Case newCase = new Lawyer_Case(caseName, clientName, caseType, description, lawyer);
+        StringBuilder sb = new StringBuilder();
+        for (Lawyer_Case c : tableData) {
+            if (c.getCaseId().toLowerCase().contains(searchText) ||
+                    c.getCaseName().toLowerCase().contains(searchText)) {
+                sb.append(c).append("\n\n");
+            }
+        }
 
-        arrayList.add(newCase);
-        LawyerMyCasesController.globalCasesList.add(newCase);
-
-
-        outputTA.setText("Case Saved:\n" + newCase);
-
-        caseNameTF.clear();
-        clientNameTF.clear();
-        caseTypeCB.setValue(null);
-        descriptionTA.clear();
-        lawyerCB.setValue(null);
-
-
+        if (sb.isEmpty()) {
+            outputTA.setText("No cases found for: " + searchText);
+        } else {
+            outputTA.setText(sb.toString());
+        }
     }
+
+
+
+    @FXML
+        public void generateReportButtonOnClick(ActionEvent actionEvent) {
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
+                oos.writeObject(new ArrayList<>(tableData));
+                outputTA.setText("Report saved successfully as " + FILE_NAME);
+            } catch (IOException e) {
+                e.printStackTrace();
+                outputTA.setText("Failed to save report.");
+            }
+        }
+
+
+
+
+
 
 
     @javafx.fxml.FXML
@@ -201,7 +239,7 @@ public class LawyerCreateCaseController {
         }
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void lawyerCreateCaseButtonOnClick(ActionEvent actionEvent) {
 
 
@@ -216,4 +254,7 @@ public class LawyerCreateCaseController {
             e.printStackTrace();
         }
     }
+
+
 }
+

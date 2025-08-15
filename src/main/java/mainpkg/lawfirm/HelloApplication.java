@@ -8,16 +8,25 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CreateAccountPage.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 800);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage stage) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(
+                    getClass().getResource("/mainpkg/lawfirm/rakin/lawyer_Create_Case.fxml")
+            );
+
+            Scene scene = new Scene(fxmlLoader.load(), 900, 800);
+            stage.setTitle("Law Firm - Create Case");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Cannot load FXML file.");
+        }
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }
