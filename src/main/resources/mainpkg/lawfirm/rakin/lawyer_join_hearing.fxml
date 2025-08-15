@@ -28,8 +28,8 @@
         <children>
             <Button onAction="#lawyerDashboardButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Dashboard" />
             <Button onAction="#lawyerMyCasesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="My Cases" />
-            <Button onAction="#lawyerDraftDocumentsButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Draft Documents" />
-            <Button onAction="#LawyerClientMessagesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Client Messages" />
+            <Button onAction="#lawyerCreateCaseButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Create Cases" />
+            <Button onAction="#LawyerClientMessagesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Messages" />
             <Button onAction="#LawyerJoinHearingButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Join Hearing" />
             <Button onAction="#LawyerSubmitReportButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Submit Report" />
             <Button onAction="#lawyerAskExpertButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Ask Expert" />
@@ -46,7 +46,7 @@
                 <font><Font name="Segoe UI Bold" size="20" /></font>
             </Label>
 
-            <TableView fx:id="lawyerJoinHearingTV" layoutX="20" layoutY="60" prefHeight="380" prefWidth="670">
+            <TableView fx:id="lawyerJoinHearingTV" layoutX="25.0" layoutY="91.0" prefHeight="350.0" prefWidth="670">
                 <columns>
                     <TableColumn fx:id="lawyerJoinHearingCaseIdCol" prefWidth="100" text="Case ID">
                         <cellValueFactory><PropertyValueFactory property="caseId" /></cellValueFactory>

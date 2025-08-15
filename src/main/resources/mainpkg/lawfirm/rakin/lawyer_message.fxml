@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600" prefWidth="899.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.rakin.LawyerClientEmployeeMessageController">
+<AnchorPane prefHeight="600" prefWidth="899.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.rakin.LawyerMessageController">
 
     <HBox alignment="CENTER_LEFT" prefHeight="60" spacing="15" style="-fx-background-color: #2c3e50;" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
         <padding><Insets left="20" /></padding>
@@ -29,7 +29,7 @@
         <children>
             <Button onAction="#lawyerDashboardButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Dashboard" />
             <Button onAction="#lawyerMyCasesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="My Cases" />
-            <Button onAction="#lawyerDraftDocumentsButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Draft Documents" />
+            <Button onAction="#lawyerCreateCaseButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Draft Documents" />
             <Button onAction="#LawyerClientMessagesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Employee &amp; Client Messages" />
             <Button onAction="#LawyerJoinHearingButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Join Hearing" />
             <Button onAction="#LawyerSubmitReportButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Submit Report" />
@@ -49,9 +49,10 @@
 
             <TableView fx:id="lawyerMessageTV" prefWidth="400" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="50">
                 <columns>
-                    <TableColumn fx:id="lawyerMessageSenderCol" prefWidth="130" text="Sender" />
-                    <TableColumn fx:id="lawyerMessageRecipientCol" prefWidth="130" text="Recipient" />
-                    <TableColumn fx:id="lawyerMessageMessageCol" prefWidth="130" text="Message" />
+                    <TableColumn fx:id="lawyerMessageSenderCol" prefWidth="100.00002896785736" text="Sender" />
+                    <TableColumn fx:id="lawyerMessageRecipientCol" prefWidth="110.39997100830078" text="Recipient" />
+                    <TableColumn fx:id="lawyerMessageMessageCol" prefWidth="101.5999755859375" text="Message" />
+               <TableColumn fx:id="lawyerTimeCol" prefWidth="101.5999755859375" text="Time" />
                 </columns>
             </TableView>
 

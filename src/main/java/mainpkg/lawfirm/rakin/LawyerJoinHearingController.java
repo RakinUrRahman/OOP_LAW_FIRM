@@ -25,7 +25,7 @@ public class LawyerJoinHearingController
     public void LawyerClientMessagesButtonOnClick(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void lawyerDraftDocumentsButtonOnClick(ActionEvent actionEvent) {
     }
 
@@ -59,5 +59,9 @@ public class LawyerJoinHearingController
 
     @javafx.fxml.FXML
     public void lawyerDashboardButtonOnClick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void lawyerCreateCaseButtonOnClick(ActionEvent actionEvent) {
     }
 }

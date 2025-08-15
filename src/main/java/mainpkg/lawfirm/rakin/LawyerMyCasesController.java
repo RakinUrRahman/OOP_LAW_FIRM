@@ -86,6 +86,7 @@ public class LawyerMyCasesController
             }
         }
 
+
         if (sb.isEmpty()) {
             outputTA.setText("No cases found for: " + searchText);
         } else {

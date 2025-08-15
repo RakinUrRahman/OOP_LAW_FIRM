@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="350" prefWidth="400" style="-fx-background-color: aqua;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.LoginController">
+
+    <!-- Title -->
+    <Label layoutX="150.0" layoutY="14.0" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Law Firm " />
+
+    <!-- User Role ComboBox -->
+    <Label layoutX="50" layoutY="80" text="Select User Role:" />
+    <ComboBox fx:id="roleCB" layoutX="160" layoutY="75" prefWidth="180" />
+
+    <!-- Username -->
+    <Label layoutX="50" layoutY="130" text="Username:" />
+    <TextField fx:id="nameTF" layoutX="160" layoutY="125" prefWidth="180" promptText="Enter your username" />
+
+    <!-- Password -->
+    <Label layoutX="50" layoutY="180" text="Password:" />
+    <PasswordField fx:id="passwordTF" layoutX="160" layoutY="175" prefWidth="180" promptText="Enter your password" />
+
+    <!-- Login Button -->
+    <Button fx:id="loginButton" layoutX="160" layoutY="230" onAction="#loginButtonOnClick" prefWidth="180" style="-fx-background-color: white;" text="Login" />
+
+</AnchorPane>
