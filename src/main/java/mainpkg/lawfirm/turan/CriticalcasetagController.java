@@ -1,14 +1,18 @@
-package turan;
+package mainpkg.lawfirm.turan;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import mainpkg.lawfirm.turan.criticalcasetagModel;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CriticalcasetagController {
+public class CriticalcasetagController
+{
     @javafx.fxml.FXML
     private TableView<criticalcasetagModel> criticalcaseTV;
     @javafx.fxml.FXML
@@ -29,49 +33,55 @@ public class CriticalcasetagController {
     private RadioButton normalrb;
     @javafx.fxml.FXML
     private Label errormsglabel;
-
     private final List<criticalcasetagModel> taskList = new ArrayList<>();
+
 
     @javafx.fxml.FXML
     public void initialize() {
-        // Table column bindings
         caseidTVC.setCellValueFactory(new PropertyValueFactory<>("caseId"));
         casenameTVC.setCellValueFactory(new PropertyValueFactory<>("caseName"));
         statustvc.setCellValueFactory(new PropertyValueFactory<>("status"));
         priorityTVC.setCellValueFactory(new PropertyValueFactory<>("priority"));
 
-        // Example data
         taskList.add(new criticalcasetagModel("C001", "Contract Dispute", "Open", "Normal"));
-        taskList.add(new criticalcasetagModel("C002", "Property Case", "Pending", "Urgent"));
-        taskList.add(new criticalcasetagModel("C003", "Fraud Investigation", "Closed", "Critical"));
 
         criticalcaseTV.getItems().setAll(taskList);
 
-        // ComboBox items
         selectcaseidcb.getItems().addAll("C001", "C002", "C003");
+
+
+
     }
 
     @javafx.fxml.FXML
     public void backbuttonhandle(ActionEvent actionEvent) {
-        // Implement navigation logic here
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainpkg/lawfirm/turan/casemanager_dashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setTitle("Client Messages");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
 
     @javafx.fxml.FXML
     public void updatebuttonhandle(ActionEvent actionEvent) {
-        errormsglabel.setText(""); // Clear previous error
-
         String selectedCaseId = selectcaseidcb.getValue();
         if (selectedCaseId == null || selectedCaseId.isEmpty()) {
             errormsglabel.setText("Please select a case ID.");
             return;
         }
 
-        // Find selected case
         criticalcasetagModel selectedCase = null;
         for (criticalcasetagModel c : taskList) {
             if (c.getCaseId().equals(selectedCaseId)) {
                 selectedCase = c;
-                break; // ✅ Stop loop without exiting method
+                return;
             }
         }
 
@@ -80,19 +90,21 @@ public class CriticalcasetagController {
             return;
         }
 
-        // Determine new priority
         String newPriority = null;
         if (normalrb.isSelected()) newPriority = "Normal";
         else if (urgentrb.isSelected()) newPriority = "Urgent";
         else if (criticalrb.isSelected()) newPriority = "Critical";
 
-        if (newPriority == null) {
+        if (newPriority == null || newPriority.isEmpty()) {
             errormsglabel.setText("Please select a priority.");
             return;
         }
 
-        // Update model and refresh table
         selectedCase.setPriority(newPriority);
-        criticalcaseTV.refresh(); // ✅ More efficient than resetting entire list
+        criticalcaseTV.getItems().setAll(taskList);
+
+
+
     }
+
 }

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.turan.SetTask">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.turan.SetTaskController">
    <children>
       <Label layoutX="79.0" layoutY="33.0" text="Set Task Deadline" />
       <TableView fx:id="settaskTV" layoutX="26.0" layoutY="63.0" prefHeight="115.0" prefWidth="301.0">

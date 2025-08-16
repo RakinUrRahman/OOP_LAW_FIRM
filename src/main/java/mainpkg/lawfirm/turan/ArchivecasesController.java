@@ -1,14 +1,17 @@
 package mainpkg.lawfirm.turan;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArchivecasesController
-{
+public class ArchivecasesController {
     @javafx.fxml.FXML
     private ComboBox<String> selectcaseidcb;
     @javafx.fxml.FXML
@@ -28,6 +31,7 @@ public class ArchivecasesController
     @javafx.fxml.FXML
     private Label errormsglabel;
     private final List<ArchiveCaseModel> taskList = new ArrayList<>();
+    private static final String FILE_NAME = System.getProperty("user.home") + "/archievecases.dat";
 
 
     @javafx.fxml.FXML
@@ -48,6 +52,16 @@ public class ArchivecasesController
 
     @javafx.fxml.FXML
     public void backbuttonhandle(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainpkg/lawfirm/turan/casemanager_dashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setTitle("Client Messages");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @javafx.fxml.FXML
@@ -71,6 +85,26 @@ public class ArchivecasesController
 
 
         archivecaseTV.getItems().setAll(taskList);
+
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
+            oos.writeObject(new ArrayList<>(taskList));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    @javafx.fxml.FXML
+    public void loadbuttonhandle(ActionEvent actionEvent) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_NAME))) {
+            ArrayList<ArchiveCaseModel> loadedCases = (ArrayList<ArchiveCaseModel>) ois.readObject();
+
+            taskList.clear(); // Clear old table data
+            taskList.addAll(loadedCases); // Add loaded cases to table
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
     }
 }

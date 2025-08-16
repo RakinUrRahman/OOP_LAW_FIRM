@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.turan.CasemanagerDashboard">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.turan.CaseManagerDashboard">
    <children>
       <Label layoutX="209.0" layoutY="64.0" text="Case Manager Dashboard" />
       <Button layoutX="145.0" layoutY="116.0" mnemonicParsing="false" onAction="#assaincasehandle" text="Assain Case" />
