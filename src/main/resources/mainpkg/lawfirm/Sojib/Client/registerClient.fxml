@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lawfirmproject.Sojib.Client.RegisterClientController">
+   <children>
+      <Button layoutX="33.0" layoutY="187.0" mnemonicParsing="false" onAction="#backButton" prefHeight="25.0" prefWidth="43.0" text="Back" />
+      <Label layoutX="32.0" layoutY="30.0" text="Enter full name" />
+      <TextField fx:id="nameTextField" layoutX="118.0" layoutY="26.0" />
+      <Label layoutX="32.0" layoutY="66.0" text="Email address" />
+      <TextField fx:id="emailTextField" layoutX="118.0" layoutY="62.0" />
+      <Label layoutX="318.0" layoutY="30.0" text="Phone number" />
+      <TextField fx:id="phoneNoTextField" layoutX="404.0" layoutY="26.0" />
+      <Label layoutX="318.0" layoutY="66.0" text="Occupation" />
+      <Label layoutX="32.0" layoutY="111.0" text="Address" />
+      <TextArea fx:id="addressTextArea" layoutX="118.0" layoutY="100.0" prefHeight="25.0" prefWidth="435.0" />
+      <Label layoutX="32.0" layoutY="159.0" text="Gender" />
+      <ComboBox fx:id="genderComboBox" layoutX="118.0" layoutY="155.0" prefWidth="150.0" />
+      <Label layoutX="318.0" layoutY="159.0" text="Date of birth" />
+      <DatePicker fx:id="dobPicker" layoutX="392.0" layoutY="155.0" />
+      <Button layoutX="270.0" layoutY="187.0" mnemonicParsing="false" onAction="#registerButton" text="Register" textFill="#ff0b0b" />
+      <TableView fx:id="tableView" layoutX="33.0" layoutY="225.0" prefHeight="167.0" prefWidth="528.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="80.66665649414062" text="Name" />
+          <TableColumn fx:id="phoneNoColumn" prefWidth="109.33331298828125" text="Phone Number" />
+            <TableColumn fx:id="emailColumn" prefWidth="112.00006103515625" text="Email" />
+            <TableColumn fx:id="genderColumn" prefWidth="92.66668701171875" text="Gender" />
+            <TableColumn fx:id="DateOfRegColumn" prefWidth="135.33331298828125" text="Date of birth" />
+        </columns>
+      </TableView>
+      <Button layoutX="439.0" layoutY="187.0" mnemonicParsing="false" onAction="#loadAllDataButton" prefHeight="25.0" prefWidth="127.0" text="Load all data" textFill="#ff0b0b" />
+      <TextField fx:id="occupationTextField" layoutX="404.0" layoutY="62.0" />
+   </children>
+</AnchorPane>
