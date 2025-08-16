@@ -10,9 +10,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.ArrayList;
 
 public class LawyerMyCasesController
@@ -97,17 +95,30 @@ public class LawyerMyCasesController
 
 
     @FXML
-        public void generateReportButtonOnClick(ActionEvent actionEvent) {
-            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
-                oos.writeObject(new ArrayList<>(tableData));
-                outputTA.setText("Report saved successfully as " + FILE_NAME);
-            } catch (IOException e) {
-                e.printStackTrace();
-                outputTA.setText("Failed to save report.");
-            }
+    public void generateReportButtonOnClick(ActionEvent actionEvent) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
+            oos.writeObject(new ArrayList<>(tableData));
+            outputTA.setText("Report saved successfully as " + FILE_NAME);
+        } catch (IOException e) {
+            e.printStackTrace();
+            outputTA.setText("Failed to save report.");
         }
+    }
 
+    @FXML
+    public void loadBinFileButtonOnClick(ActionEvent actionEvent) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_NAME))) {
+            ArrayList<Lawyer_Case> loadedCases = (ArrayList<Lawyer_Case>) ois.readObject();
 
+            tableData.clear(); // Clear old table data
+            tableData.addAll(loadedCases); // Add loaded cases to table
+            outputTA.setText("Loaded " + loadedCases.size() + " cases from " + FILE_NAME);
+
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+            outputTA.setText("Failed to load cases from file.");
+        }
+    }
 
 
 
@@ -240,7 +251,7 @@ public class LawyerMyCasesController
         }
     }
 
-    @Deprecated
+    @FXML
     public void lawyerCreateCaseButtonOnClick(ActionEvent actionEvent) {
 
 
@@ -255,6 +266,7 @@ public class LawyerMyCasesController
             e.printStackTrace();
         }
     }
+
 
 
 }

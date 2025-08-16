@@ -4,7 +4,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -27,7 +28,7 @@
         <children>
             <Button onAction="#lawyerDashboardButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Dashboard" />
             <Button onAction="#lawyerMyCasesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="My Cases" />
-            <Button onAction="#lawyerDraftDocumentsButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Draft Documents" />
+            <Button onAction="#lawyerCreateCaseButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Draft Documents" />
             <Button onAction="#LawyerClientMessagesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Client Messages" />
             <Button onAction="#LawyerJoinHearingButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Join Hearing" />
             <Button onAction="#LawyerSubmitReportButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Submit Report" />
@@ -44,15 +45,23 @@
                 <font><Font name="Segoe UI Bold" size="22" /></font>
             </Label>
 
-            <Label layoutX="30.0" layoutY="90.0" text="Case ID:" />
-            <TextField fx:id="lawyerCloseCaseCaseIdTF" layoutX="150.0" layoutY="85.0" prefWidth="500.0" />
+            <Label layoutX="30.0" layoutY="407.0" text="Case ID or Name" />
+            <TextField fx:id="searchCaseIDTF" layoutX="143.0" layoutY="403.0" prefWidth="500.0" />
 
-            <Label layoutX="30.0" layoutY="140.0" text="Final Remarks:" />
-            <TextArea fx:id="lawyerCloseCaseRemarksTA" layoutX="150.0" layoutY="135.0" prefHeight="200.0" prefWidth="500.0" />
-
-            <Button fx:id="lawyerCloseCaseButtonOnClick" layoutX="150.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleCloseCase" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" text="Close Case" />
-
-            <Button fx:id="generateReportButton" layoutX="20" layoutY="500" onAction="#LawyerCloseCaseGenerateReportButtonOnClick" prefWidth="160" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" text="Generate Report" />
+            <Button layoutX="143.0" layoutY="442.0" mnemonicParsing="false" onAction="#closeCaseButtonOnClick" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" text="Close Case" />
+            <TableView fx:id="lawyerMyCasesTV" layoutX="20" layoutY="98.0" prefHeight="236.0" prefWidth="680">
+                <columns>
+                    <TableColumn fx:id="caseIdCol" prefWidth="60.79998779296875" text="Case ID" />
+                    <TableColumn fx:id="caseNameCol" prefWidth="100.79998779296875" text="Case Name" />
+                    <TableColumn fx:id="clientNameCol" prefWidth="92.0" text="Client Name" />
+                    <TableColumn fx:id="caseTypeCol" prefWidth="96.80001831054688" text="Case Type" />
+                    <TableColumn fx:id="descriptionCol" prefWidth="124.0" text="Description" />
+                    <TableColumn fx:id="lawyerCol" minWidth="0.0" prefWidth="122.39990234375" text="Lawyer" />
+                    <TableColumn fx:id="statusCol" minWidth="0.0" prefWidth="80.8001708984375" text="Status" />
+                </columns>
+            </TableView>
+            <Button layoutX="20" layoutY="500" onAction="#generateReportButtonOnClick" prefWidth="160" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" text="Generate Report" />
+         <Button layoutX="20.0" layoutY="72.0" mnemonicParsing="false" onAction="#loadBinFileButtonOnClick" text="Load Bin FIle" />
 
         </children>
     </AnchorPane>

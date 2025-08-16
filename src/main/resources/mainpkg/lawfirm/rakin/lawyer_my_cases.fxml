@@ -35,6 +35,7 @@
         <children>
             <Button onAction="#lawyerDashboardButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Dashboard" />
             <Button onAction="#lawyerMyCasesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="My Cases" />
+            <Button onAction="#lawyerCreateCaseButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Create Case" />
             <Button onAction="#LawyerClientMessagesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Client Messages" />
             <Button onAction="#LawyerJoinHearingButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Join Hearing" />
             <Button onAction="#LawyerSubmitReportButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Submit Report" />
@@ -66,10 +67,11 @@
             <TableColumn fx:id="statusCol" minWidth="0.0" prefWidth="80.8001708984375" text="Status" />
             </columns>
         </TableView>
-      <Button layoutX="20.0" layoutY="65.0" mnemonicParsing="false" onAction="#loadAllCasesButtonOnClick" text="Load All Cases" />
+      <Button layoutX="20.0" layoutY="65.0" mnemonicParsing="false" onAction="#loadAllCasesButtonOnClick" prefHeight="26.0" prefWidth="226.0" text="Load All Cases From Create Case" />
       <TextArea fx:id="outputTA" layoutX="210.0" layoutY="340.0" prefHeight="184.0" prefWidth="486.0" />
       <Button layoutX="20.0" layoutY="444.0" mnemonicParsing="false" onAction="#generateReportButtonOnClick" text="Generate Report" />
       <Button layoutX="20.0" layoutY="406.0" mnemonicParsing="false" onAction="#searchButtonOnClick" text="Search" />
+      <Button layoutX="273.0" layoutY="65.0" mnemonicParsing="false" onAction="#loadBinFileButtonOnClick" text="Load Bin File" />
 
 
     </AnchorPane>

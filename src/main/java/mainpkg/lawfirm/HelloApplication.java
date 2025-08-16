@@ -13,7 +13,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(
-                    getClass().getResource("/mainpkg/lawfirm/Login_Page.fxml")
+                    getClass().getResource("/mainpkg/lawfirm/rakin/lawyer_close_case.fxml")
             );
 
             Scene scene = new Scene(fxmlLoader.load(), 900, 800);
