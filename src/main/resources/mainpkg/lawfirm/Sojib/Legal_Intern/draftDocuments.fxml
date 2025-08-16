@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="486.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lawfirmproject.Sojib.Legal_Intern.DraftDocumentsController">
+<AnchorPane prefHeight="486.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.Sojib.Legal_Intern.DraftDocumentsController">
    <children>
       <Label layoutX="215.0" layoutY="14.0" text="Draft Legal Documents">
          <font>

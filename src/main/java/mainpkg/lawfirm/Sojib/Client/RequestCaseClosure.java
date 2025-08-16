@@ -1,11 +1,11 @@
 package mainpkg.lawfirm.Sojib.Client;
 
-import com.example.lawfirmproject.User;
+import mainpkg.lawfirm.User2;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 
-public class RequestCaseClosure extends User implements Serializable {
+public class RequestCaseClosure extends User2 implements Serializable {
 
     private String selectCase;
     private String lawyer;

@@ -1,11 +1,11 @@
 package mainpkg.lawfirm.Sojib.Legal_Intern;
 
-import com.example.lawfirmproject.User;
+import mainpkg.lawfirm.User2;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 
-public class ScheduleInternalMeetings extends User implements Serializable {
+public class ScheduleInternalMeetings extends User2 implements Serializable {
     private String meetingTitle;
     private String meetingAgenda;
     private LocalDate date;

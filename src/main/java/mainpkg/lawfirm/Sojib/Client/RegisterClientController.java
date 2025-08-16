@@ -1,14 +1,23 @@
 package mainpkg.lawfirm.Sojib.Client;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import mainpkg.lawfirm.Sojib.Client.AppendableObjectOutPutStream;
+import mainpkg.lawfirm.Sojib.Client.RegisterClient;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -56,7 +65,7 @@ public class RegisterClientController {
     @FXML
     private TextField occupationTextField;
 
-    @FXML
+    @javafx.fxml.FXML
     public void initialize() {
         loadAllData();
         genderComboBox.getItems().addAll("Male", "Female");
@@ -71,7 +80,7 @@ public class RegisterClientController {
 
     @FXML
     void backButton(ActionEvent event) throws IOException {
-        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/lawfirmproject/Sojib/Client/dashboardClient.fxml")));
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/mainpkg/lawfirm/Sojib/Client/dashboardClient.fxml")));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setTitle("dashboard");

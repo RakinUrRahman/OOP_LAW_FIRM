@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lawfirmproject.Sojib.Client.TrackCaseProgressController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.Sojib.Client.TrackCaseProgressController">
    <children>
       <Button layoutX="38.0" layoutY="348.0" mnemonicParsing="false" onAction="#backButton" text="Back to dashboard " />
       <Button layoutX="433.0" layoutY="348.0" mnemonicParsing="false" onAction="#loadAllDataButton" text="Load All Data Button" />

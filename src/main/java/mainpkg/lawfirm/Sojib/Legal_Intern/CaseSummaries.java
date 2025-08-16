@@ -1,11 +1,11 @@
 package mainpkg.lawfirm.Sojib.Legal_Intern;
 
-import com.example.lawfirmproject.User;
+import mainpkg.lawfirm.User2;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 
-public class CaseSummaries extends User implements Serializable {
+public class CaseSummaries extends User2 implements Serializable {
     private String title;
     private String name;
     private Integer ID;

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="479.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lawfirmproject.Sojib.Client.CommunicateWithLaywerController">
+<AnchorPane prefHeight="479.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.Sojib.Client.CommunicateWithLaywerController">
    <children>
       <Label layoutX="11.0" layoutY="130.0" text="Enter New messages" />
       <TextArea fx:id="messagesTextArea" layoutX="127.0" layoutY="130.0" prefHeight="77.0" prefWidth="537.0" />

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="449.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lawfirmproject.Sojib.Client.RequestCaseClosureController">
+<AnchorPane prefHeight="449.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.Sojib.Client.RequestCaseClosureController">
    <children>
       <TableView fx:id="tableView" layoutX="21.0" layoutY="208.0" prefHeight="188.0" prefWidth="661.0">
         <columns>

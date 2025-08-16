@@ -1,11 +1,12 @@
 package mainpkg.lawfirm.Sojib.Legal_Intern;
 
-import com.example.lawfirmproject.User;
+
+import mainpkg.lawfirm.User2;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 
-public class DraftDocuments extends User implements Serializable {
+public class DraftDocuments extends User2 implements Serializable {
     private String documentTitle;
     private String documentType;
     private LocalDate date;

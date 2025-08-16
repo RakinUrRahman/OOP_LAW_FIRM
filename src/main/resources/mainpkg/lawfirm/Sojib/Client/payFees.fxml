@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lawfirmproject.Sojib.Client.PayFeesController">
+<AnchorPane prefHeight="400.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.Sojib.Client.PayFeesController">
    <children>
       <Label layoutX="23.0" layoutY="25.0" text="Show total due amount" />
       <Label layoutX="22.0" layoutY="69.0" text="Select payment method" />

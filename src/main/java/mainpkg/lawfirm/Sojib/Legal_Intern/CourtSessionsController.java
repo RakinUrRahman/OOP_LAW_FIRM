@@ -1,6 +1,6 @@
 package mainpkg.lawfirm.Sojib.Legal_Intern;
 
-import com.example.lawfirmproject.Sojib.Client.AppendableObjectOutPutStream;
+import mainpkg.lawfirm.Sojib.Client.AppendableObjectOutPutStream;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -64,7 +64,7 @@ public class CourtSessionsController {
 
     @FXML
     void backButton(ActionEvent event) throws IOException {
-        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/lawfirmproject/Sojib/Legal_Intern/dashboardOfLegal_Intern.fxml")));
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/mainpkg/lawfirm/Sojib/Legal_Intern/dashboardOfLegal_Intern.fxml")));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setTitle("dashboard");

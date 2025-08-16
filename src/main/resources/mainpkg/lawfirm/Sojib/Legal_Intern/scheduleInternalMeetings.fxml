@@ -10,7 +10,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="471.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lawfirmproject.Sojib.Legal_Intern.ScheduleInternalMeetingsController">
+<AnchorPane prefHeight="471.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.Sojib.Legal_Intern.ScheduleInternalMeetingsController">
    <children>
       <TextField fx:id="meetingTitleTextField" layoutX="133.0" layoutY="33.0" prefHeight="25.0" prefWidth="181.0" />
       <Label layoutX="34.0" layoutY="37.0" text="Meeting Title" />

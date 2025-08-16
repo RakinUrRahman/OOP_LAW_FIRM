@@ -8,7 +8,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lawfirmproject.Sojib.Legal_Intern.DashboardOfLegalInternController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.Sojib.Legal_Intern.DashboardOfLegalInternController">
    <children>
       <Button layoutX="120.0" layoutY="81.0" mnemonicParsing="false" onAction="#accessAssignedCasesButton" prefHeight="41.0" prefWidth="151.0" text="Access Assigned Cases" />
       <Button layoutX="362.0" layoutY="81.0" mnemonicParsing="false" onAction="#prepareCaseSummariesButton" prefHeight="41.0" prefWidth="151.0" text="Prepare Case Summaries" />

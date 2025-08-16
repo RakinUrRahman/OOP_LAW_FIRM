@@ -30,8 +30,9 @@ public class LoginController {
                 "Financial Officer",
                 "Office Administrator",
                 "Paralegal",
-                "Legal Intern",
-                "Senior Partner"
+                "Case Manager",
+                "Hr Manager",
+                "Legal Intern"
         );
 
         roleCB.getSelectionModel().selectFirst();
@@ -57,7 +58,7 @@ public class LoginController {
                     root = javafx.fxml.FXMLLoader.load(getClass().getResource("/mainpkg/lawfirm/rakin/lawyer_dashboard.fxml"));
                     break;
                 case "Client":
-                    root = javafx.fxml.FXMLLoader.load(getClass().getResource("ClientDashboard.fxml"));
+                    root = javafx.fxml.FXMLLoader.load(getClass().getResource("/mainpkg/lawfirm/Sojib/Client/dashboardClient.fxml"));
                     break;
                 case "Financial Officer":
                     root = javafx.fxml.FXMLLoader.load(getClass().getResource("/mainpkg/lawfirm/rakin/financial_officer_dashboard.fxml"));
@@ -69,10 +70,13 @@ public class LoginController {
                     root = javafx.fxml.FXMLLoader.load(getClass().getResource("/mainpkg/lawfirm/ronon/paralegaldb.fxml"));
                     break;
                 case "Case Manager":
-                    root = javafx.fxml.FXMLLoader.load(getClass().getResource("/mainpkg/lawfirm/turan/hr_dashboard.fxml"));
+                    root = javafx.fxml.FXMLLoader.load(getClass().getResource("/mainpkg/lawfirm/turan/casemanager_dashboard.fxml"));
                     break;
                 case "HR Manager":
-                    root = javafx.fxml.FXMLLoader.load(getClass().getResource("/mainpkg/lawfirm/turan/casemanager_dashboard.fxml"));
+                    root = javafx.fxml.FXMLLoader.load(getClass().getResource("/mainpkg/lawfirm/turan/hr_dashboard.fxml"));
+                    break;
+                case "Legal Intern":
+                    root = javafx.fxml.FXMLLoader.load(getClass().getResource("/mainpkg/lawfirm/Sojib/Legal_Intern/dashboardOfLegal_Intern.fxml"));
                     break;
             }
 

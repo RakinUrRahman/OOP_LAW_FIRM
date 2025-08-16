@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="463.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lawfirmproject.Sojib.Legal_Intern.AccessAssignedCasesController">
+<AnchorPane prefHeight="463.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.Sojib.Legal_Intern.AccessAssignedCasesController">
    <children>
       <Label layoutX="33.0" layoutY="31.0" text=" Case Title" />
       <TextField fx:id="titleTextField" layoutX="92.0" layoutY="27.0" />

@@ -20,7 +20,7 @@ public class DashboardOfLegalInternController {
 
     @FXML
     void accessAssignedCasesButton(ActionEvent event) throws IOException {
-        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/lawfirmproject/Sojib/Legal_Intern/accessAssignedCases .fxml")));
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/mainpkg/lawfirm/Sojib/Legal_Intern/accessAssignedCases .fxml")));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setTitle("AccessAssignedCases");
@@ -31,7 +31,7 @@ public class DashboardOfLegalInternController {
 
     @FXML
     void attendCourtSessionsButton(ActionEvent event) throws IOException {
-        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/lawfirmproject/Sojib/Legal_Intern/courtSessions.fxml")));
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/mainpkg/lawfirm/Sojib/Legal_Intern/courtSessions.fxml")));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setTitle("courtSessions");
@@ -46,7 +46,7 @@ public class DashboardOfLegalInternController {
 
     @FXML
     void conductLegalResearchButton(ActionEvent event) throws IOException {
-        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/lawfirmproject/Sojib/Legal_Intern/conductResearch.fxml")));
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/mainpkg/lawfirm/Sojib/Legal_Intern/conductResearch.fxml")));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setTitle("ConductResearch");
@@ -56,7 +56,7 @@ public class DashboardOfLegalInternController {
 
     @FXML
     void draftLegalDocumentsButton(ActionEvent event) throws IOException {
-        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/lawfirmproject/Sojib/Legal_Intern/DraftDocuments.fxml")));
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/mainpkg/lawfirm/Sojib/Legal_Intern/draftDocuments.fxml")));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setTitle("DraftDocuments");
@@ -66,7 +66,7 @@ public class DashboardOfLegalInternController {
 
     @FXML
     void fileAndOrganizeDigitalRecordButton(ActionEvent event) throws IOException {
-        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/lawfirmproject/Sojib/Legal_Intern/organizeDigitalRecords.fxml")));
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/mainpkg/lawfirm/Sojib/Legal_Intern/organizeDigitalRecords.fxml")));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setTitle("OrganizeDigitalRecords");
@@ -76,7 +76,7 @@ public class DashboardOfLegalInternController {
 
     @FXML
     void prepareCaseSummariesButton(ActionEvent event) throws IOException {
-        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/lawfirmproject/Sojib/Legal_Intern/caseSummaries.fxml")));
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/mainpkg/lawfirm/Sojib/Legal_Intern/caseSummaries.fxml")));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setTitle("CaseSummaries");
@@ -86,7 +86,7 @@ public class DashboardOfLegalInternController {
 
     @FXML
     void receiveInternshipEvaluationButton(ActionEvent event) throws IOException {
-        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/lawfirmproject/Sojib/Legal_Intern/internshipEvaluation.fxml")));
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/mainpkg/lawfirm/Sojib/Legal_Intern/internshipEvaluation.fxml")));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setTitle("InternshipEvaluation");
@@ -96,7 +96,7 @@ public class DashboardOfLegalInternController {
 
     @FXML
     void scheduleInternalMeetingButton(ActionEvent event) throws IOException {
-        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/lawfirmproject/Sojib/Legal_Intern/scheduleInternalMeetings.fxml")));
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/mainpkg/lawfirm/Sojib/Legal_Intern/scheduleInternalMeetings.fxml")));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setTitle("ScheduleInternalMeetings");
