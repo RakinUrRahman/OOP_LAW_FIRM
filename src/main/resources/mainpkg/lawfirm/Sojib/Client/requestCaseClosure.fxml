@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="449.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lawfirmproject.Sojib.Client.RequestCaseClosureController">
+   <children>
+      <TableView fx:id="tableView" layoutX="21.0" layoutY="208.0" prefHeight="188.0" prefWidth="661.0">
+        <columns>
+            <TableColumn fx:id="dateColumn" prefWidth="88.66665840148926" text="Date" />
+          <TableColumn fx:id="caseIDColumn" prefWidth="105.33333587646484" text="Case ID" />
+            <TableColumn fx:id="lawyerColumn" prefWidth="124.66673278808594" text="Laywer Assigned" />
+            <TableColumn fx:id="statusColumn" prefWidth="122.0" text="Status" />
+          <TableColumn fx:id="reasonColumn" prefWidth="223.99990844726562" text="Reason" />
+        </columns>
+      </TableView>
+      <Label layoutX="213.0" layoutY="14.0" prefHeight="27.0" prefWidth="173.0" text="Request Case Closure">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="22.0" layoutY="409.0" mnemonicParsing="false" onAction="#backButton" text="Back to dashboard " />
+      <Button layoutX="578.0" layoutY="166.0" mnemonicParsing="false" onAction="#requestButton" text="Request Closure" />
+      <Label layoutX="15.0" layoutY="56.0" text="Select Case" />
+      <ComboBox fx:id="selectCaseComboBox" layoutX="80.0" layoutY="52.0" prefWidth="150.0" />
+      <TextField fx:id="IDTextField" layoutX="81.0" layoutY="92.0" />
+      <Label layoutX="15.0" layoutY="96.0" text="Case ID" />
+      <Label layoutX="481.0" layoutY="56.0" text="Case Status" />
+      <Label layoutX="242.0" layoutY="87.0" text="Closure Reason " />
+      <Button layoutX="512.0" layoutY="409.0" mnemonicParsing="false" onAction="#loadAllDataButton" prefHeight="25.0" prefWidth="156.0" text="Load All Data" />
+      <TextField fx:id="lawyerTextField" layoutX="329.0" layoutY="52.0" prefHeight="25.0" prefWidth="143.0" />
+      <Label layoutX="242.0" layoutY="56.0" text="Name Lawyer" />
+      <DatePicker fx:id="datePicker" layoutX="81.0" layoutY="131.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="15.0" layoutY="135.0" text="Date" />
+      <TextArea fx:id="reasonTextArea" layoutX="329.0" layoutY="85.0" prefHeight="64.0" prefWidth="351.0" />
+      <TextField fx:id="statusTextField" layoutX="553.0" layoutY="52.0" prefHeight="25.0" prefWidth="128.0" />
+   </children>
+</AnchorPane>
