@@ -30,7 +30,7 @@
         </padding>
 
         <children>
-            <Button onAction="#ofDashboardButtonOnClick" text="Dashboard" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button onAction="#ofDashboardButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Dashboard" />
             <Button onAction="#foClientPaymentHistoryButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Client Payment History" />
             <Button onAction="#fogenerateReportPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Financial Reports" />
             <Button onAction="#foapproveRejectPaymentPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Approve Payments" />
@@ -51,6 +51,7 @@
                     <Font name="Segoe UI Bold" size="22" />
                 </font>
             </Label>
+         <Label fx:id="outputLabel" layoutX="28.0" layoutY="84.0" prefHeight="394.0" prefWidth="591.0" style="-fx-background-color: white;" />
         </children>
     </AnchorPane>
 

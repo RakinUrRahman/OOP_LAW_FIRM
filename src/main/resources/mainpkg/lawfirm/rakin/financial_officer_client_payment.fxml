@@ -15,12 +15,12 @@
 
     <HBox alignment="CENTER_LEFT" prefHeight="60" spacing="15" style="-fx-background-color: #1abc9c;" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
         <padding>
-            <Insets left="20"/>
+            <Insets left="20" />
         </padding>
         <children>
             <Label style="-fx-text-fill: white;" text="Welcome, Financial Officer">
                 <font>
-                    <Font name="Segoe UI Bold" size="22"/>
+                    <Font name="Segoe UI Bold" size="22" />
                 </font>
             </Label>
         </children>
@@ -28,10 +28,10 @@
 
     <VBox prefWidth="180" spacing="12" style="-fx-background-color: #16a085;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="60">
         <padding>
-            <Insets top="25" bottom="15" left="10" right="10"/>
+            <Insets bottom="15" left="10" right="10" top="25" />
         </padding>
         <children>
-            <Button onAction="#ofDashboardButtonOnClick" text="Dashboard" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button onAction="#ofDashboardButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Dashboard" />
             <Button onAction="#foClientPaymentHistoryButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Client Payment History" />
             <Button onAction="#fogenerateReportPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Financial Reports" />
             <Button onAction="#foapproveRejectPaymentPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Approve Payments" />
@@ -45,32 +45,31 @@
         </children>
     </VBox>
 
-    <AnchorPane style="-fx-background-color: #ecf0f1;" AnchorPane.topAnchor="60" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0">
-        <VBox spacing="20" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0">
+    <AnchorPane style="-fx-background-color: #ecf0f1;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="60">
+        <VBox spacing="20" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
             <padding>
-                <Insets top="20" right="20" bottom="20" left="20"/>
+                <Insets bottom="20" left="20" right="20" top="20" />
             </padding>
 
             <Label text="Client Payment History">
                 <font>
-                    <Font name="Segoe UI Bold" size="22"/>
+                    <Font name="Segoe UI Bold" size="22" />
                 </font>
             </Label>
 
             <TableView fx:id="clientPaymentTable" prefHeight="460" prefWidth="850">
                 <columns>
-                    <TableColumn fx:id="clientNameCol" text="Client Name" prefWidth="180"/>
-                    <TableColumn fx:id="caseRefCol" text="Case Reference" prefWidth="160"/>
-                    <TableColumn fx:id="paymentDateCol" text="Payment Date" prefWidth="150"/>
-                    <TableColumn fx:id="amountCol" text="Amount (৳)" prefWidth="120"/>
-                    <TableColumn fx:id="paymentMethodCol" text="Method" prefWidth="120"/>
-                    <TableColumn fx:id="statusCol" text="Status" prefWidth="100"/>
+                    <TableColumn fx:id="clientNameCol" prefWidth="126.4000244140625" text="Client Name" />
+                    <TableColumn fx:id="caseRefCol" prefWidth="151.20001220703125" text="Case Reference" />
+                    <TableColumn fx:id="paymentDateCol" prefWidth="154.40005493164062" text="Payment Date" />
+                    <TableColumn fx:id="amountCol" prefWidth="110.39996337890625" text="Amount " />
+                    <TableColumn fx:id="paymentMethodCol" prefWidth="192.0" text="Method" />
+                    <TableColumn fx:id="statusCol" prefWidth="100" text="Status" />
                 </columns>
             </TableView>
 
             <HBox spacing="10">
-                <Button text="Refresh" onAction="#onRefreshClientPayments" style="-fx-background-color: #27ae60; -fx-text-fill: white;" />
-                <Button text="Export to CSV" onAction="#onExportClientPayments" style="-fx-background-color: #2980b9; -fx-text-fill: white;" />
+                <Button onAction="#generateReportButtonOnAction" style="-fx-background-color: #2980b9; -fx-text-fill: white;" text="Generate Report" />
             </HBox>
         </VBox>
     </AnchorPane>

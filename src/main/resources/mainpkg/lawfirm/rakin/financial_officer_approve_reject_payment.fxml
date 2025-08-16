@@ -33,7 +33,7 @@
             <Insets bottom="15" left="10" right="10" top="25" />
         </padding>
         <children>
-            <Button onAction="#ofDashboardButtonOnClick" text="Dashboard" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button onAction="#ofDashboardButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Dashboard" />
             <Button onAction="#foClientPaymentHistoryButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Client Payment History" />
             <Button onAction="#fogenerateReportPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Financial Reports" />
             <Button onAction="#foapproveRejectPaymentPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Approve Payments" />
@@ -62,23 +62,24 @@
                     <TableColumn fx:id="foApprovePaymentsAmountCol" prefWidth="100" text="Amount" />
                     <TableColumn fx:id="foApprovePaymentsPurposeCol" prefWidth="200" text="Purpose" />
                     <TableColumn fx:id="foApprovePaymentsDateRequestedCol" prefWidth="130" text="Date Requested" />
+                    <TableColumn fx:id="foApprovePaymentsStatusCol" prefWidth="100" text="Status" />
+
                 </columns>
             </TableView>
 
             <HBox spacing="10">
                 <Label text="Request ID:" />
-                <TextField fx:id="foApprovePaymentsRequestIdTF" editable="false" prefWidth="100" />
+                <TextField fx:id="foApprovePaymentsRequestIdTF" editable="true" prefWidth="100" />
                 <Label text="Client:" />
-                <TextField fx:id="foApprovePaymentsClientNameTF" editable="false" prefWidth="150" />
+                <TextField fx:id="foApprovePaymentsClientNameTF" editable="true" prefWidth="150" />
                 <Label text="Amount:" />
-                <TextField fx:id="foApprovePaymentsAmountTF" editable="false" prefWidth="100" />
+                <TextField fx:id="foApprovePaymentsAmountTF" editable="true" prefWidth="100" />
             </HBox>
 
             <Label text="Comments (Optional):" />
             <TextArea fx:id="foApprovePaymentsCommtentTA" prefHeight="80" prefWidth="400" promptText="Write reason if rejecting or additional info if approving..." />
-             <Button onAction="#foApprovePaymentsApproveButtonOnClick" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Approve" />
-             <Button onAction="#foApprovePaymentsRejectButtonOnClick" style="-fx-background-color: #c0392b; -fx-text-fill: white;" text="Reject" />
-             <Button onAction="#foApprovePaymentsClearButtonOnClick" text="Clear Selection" />
+            <Button onAction="#approveButtonOnClick" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Approve" />
+            <Button onAction="#rejectButtonOnClick" style="-fx-background-color: #c0392b; -fx-text-fill: white;" text="Reject" />
 
             <HBox spacing="15" />
         </VBox>

@@ -13,6 +13,7 @@
 
 <AnchorPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.lawfirm.rakin.FinancialOfficerAuditController">
 
+    <!-- Header -->
     <HBox alignment="CENTER_LEFT" prefHeight="60" spacing="15" style="-fx-background-color: #1abc9c;" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
         <padding>
             <Insets left="20" />
@@ -26,29 +27,28 @@
         </children>
     </HBox>
 
+    <!-- Sidebar -->
     <VBox prefWidth="180" spacing="12" style="-fx-background-color: #16a085;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="60">
         <padding>
             <Insets bottom="15" left="10" right="10" top="25" />
         </padding>
         <children>
-            <children>
-                <Button onAction="#ofDashboardButtonOnClick" text="Dashboard" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" />
-                <Button onAction="#foClientPaymentHistoryButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Client Payment History" />
-                <Button onAction="#fogenerateReportPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Financial Reports" />
-                <Button onAction="#foapproveRejectPaymentPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Approve Payments" />
-                <Button onAction="#foupdateBillingRatesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Update Billing Rates" />
-                <Button onAction="#fomonitorDuesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Monitor Dues" />
-                <Button onAction="#fologTransactionsButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Log Transactions" />
-                <Button onAction="#foauditBillingErrorsButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Audit Billing" />
-                <Button onAction="#foexportFinancialsButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Export Statements" />
-                <Separator prefWidth="160" />
-                <Button onAction="#fologoutButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Logout" />
-            </children>
+            <Button onAction="#ofDashboardButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Dashboard" />
+            <Button onAction="#foClientPaymentHistoryButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Client Payment History" />
+            <Button onAction="#fogenerateReportPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Financial Reports" />
+            <Button onAction="#foapproveRejectPaymentPageButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Approve Payments" />
+            <Button onAction="#foupdateBillingRatesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Update Billing Rates" />
+            <Button onAction="#fomonitorDuesButtonOnClick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Monitor Dues" />
+            <Button onAction="#fologTransactionsButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Log Transactions" />
+            <Button onAction="#foauditBillingErrorsButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Audit Billing" />
+            <Button onAction="#foexportFinancialsButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Export Statements" />
+            <Separator prefWidth="160" />
+            <Button onAction="#fologoutButtonOnCLick" prefWidth="160" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Logout" />
         </children>
     </VBox>
 
+    <!-- Main Content Area -->
     <AnchorPane style="-fx-background-color: #ecf0f1;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="60">
-
         <VBox spacing="20" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
             <padding>
                 <Insets bottom="20" left="20" right="20" top="20" />
@@ -62,21 +62,20 @@
 
             <TableView fx:id="foAuditsTV" prefHeight="450" prefWidth="850">
                 <columns>
-                    <TableColumn fx:id="errorIdCol" prefWidth="80" text="foAuditErrorIdCol" />
-                    <TableColumn fx:id="clientIdCol" prefWidth="100" text="foAuditClientIdCol" />
-                    <TableColumn fx:id="descriptionCol" prefWidth="250" text="foAuditDescriptionCol" />
-                    <TableColumn fx:id="amountCol" prefWidth="100" text="foAuditAmountCol" />
-                    <TableColumn fx:id="statusCol" prefWidth="100" text="foAuditStatusCol" />
+                    <TableColumn fx:id="errorIdCol" prefWidth="80" text="Error ID" />
+                    <TableColumn fx:id="clientIdCol" prefWidth="100" text="Client ID" />
+                    <TableColumn fx:id="descriptionCol" prefWidth="250" text="Description" />
+                    <TableColumn fx:id="amountCol" prefWidth="100" text="Amount" />
+                    <TableColumn fx:id="statusCol" prefWidth="100" text="Status" />
                     <TableColumn fx:id="actionCol" prefWidth="180" text="Action" />
                 </columns>
             </TableView>
 
             <HBox spacing="10">
-                <Button onAction="#foAuditResolvedButtonOnClick" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Mark Selected as Resolved" />
-                <Button onAction="#foAuditReviewButtonOnClick" style="-fx-background-color: #e67e22; -fx-text-fill: white;" text="Flag for Review" />
+                <Button onAction="#resolvedButtonOnClick" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Mark Selected as Resolved" />
+                <Button onAction="#flagButtonOnClick" style="-fx-background-color: #e67e22; -fx-text-fill: white;" text="Flag for Review" />
             </HBox>
         </VBox>
-
     </AnchorPane>
 
 </AnchorPane>
