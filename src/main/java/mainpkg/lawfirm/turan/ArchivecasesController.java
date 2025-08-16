@@ -31,7 +31,7 @@ public class ArchivecasesController {
     @javafx.fxml.FXML
     private Label errormsglabel;
     private final List<ArchiveCaseModel> taskList = new ArrayList<>();
-    private static final String FILE_NAME = System.getProperty("user.home") + "/archievecases.dat";
+    private static final String FILE_NAME = System.getProperty("user.home") + "/archievecases.bin";
 
 
     @javafx.fxml.FXML
@@ -100,8 +100,8 @@ public class ArchivecasesController {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_NAME))) {
             ArrayList<ArchiveCaseModel> loadedCases = (ArrayList<ArchiveCaseModel>) ois.readObject();
 
-            taskList.clear(); // Clear old table data
-            taskList.addAll(loadedCases); // Add loaded cases to table
+            taskList.clear();
+            taskList.addAll(loadedCases);
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
