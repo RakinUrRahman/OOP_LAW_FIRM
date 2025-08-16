@@ -35,7 +35,7 @@ public class FinancialOfficerClientPaymentController {
     private TableView<ClientPayment> clientPaymentTable;
 
     private ObservableList<ClientPayment> paymentList = FXCollections.observableArrayList();
-    private static final String FILE = "clientPayments.bin";
+    private static final String FILE = System.getProperty("user.home") + "/clientPayments.bin";
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -125,7 +125,7 @@ public class FinancialOfficerClientPaymentController {
     @javafx.fxml.FXML
     public void fologoutButtonOnCLick(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainpkg/lawfirm/rakin/Login_Page.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainpkg/lawfirm/Login_Page.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
             stage.setTitle("Update Billings");

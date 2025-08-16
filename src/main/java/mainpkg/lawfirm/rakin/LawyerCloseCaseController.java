@@ -34,7 +34,7 @@ public class LawyerCloseCaseController {
     @javafx.fxml.FXML
     private TableColumn<Lawyer_Case, String> descriptionCol;
 
-    private static final String FILE_NAME = System.getProperty("user.home") + "/cases.dat";
+    private static final String FILE_NAME = System.getProperty("user.home") + "/cases.bin";
     ObservableList<Lawyer_Case> tableData = FXCollections.observableArrayList();
 
 
@@ -56,8 +56,8 @@ public class LawyerCloseCaseController {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_NAME))) {
             ArrayList<Lawyer_Case> loadedCases = (ArrayList<Lawyer_Case>) ois.readObject();
 
-            tableData.clear(); // Clear old table data
-            tableData.addAll(loadedCases); // Add loaded cases to table
+            tableData.clear();
+            tableData.addAll(loadedCases);
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -135,7 +135,7 @@ public class LawyerCloseCaseController {
     public void lawyerLogoutButtonOnClick(ActionEvent actionEvent) {
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainpkg/lawfirm/rakin/Login_Page.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainpkg/lawfirm/Login_Page.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
             stage.setTitle("Login");

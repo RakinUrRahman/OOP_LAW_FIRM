@@ -63,16 +63,16 @@ public class LoginController {
                     root = javafx.fxml.FXMLLoader.load(getClass().getResource("/mainpkg/lawfirm/rakin/financial_officer_dashboard.fxml"));
                     break;
                 case "Office Administrator":
-                    root = javafx.fxml.FXMLLoader.load(getClass().getResource("OfficeAdminDashboard.fxml"));
+                    root = javafx.fxml.FXMLLoader.load(getClass().getResource("/mainpkg/lawfirm/ronon/officeadmindb.fxml"));
                     break;
                 case "Paralegal":
-                    root = javafx.fxml.FXMLLoader.load(getClass().getResource("ParalegalDashboard.fxml"));
+                    root = javafx.fxml.FXMLLoader.load(getClass().getResource("/mainpkg/lawfirm/ronon/paralegaldb.fxml"));
                     break;
-                case "Legal Intern":
-                    root = javafx.fxml.FXMLLoader.load(getClass().getResource("LegalInternDashboard.fxml"));
+                case "Case Manager":
+                    root = javafx.fxml.FXMLLoader.load(getClass().getResource("/mainpkg/lawfirm/turan/hr_dashboard.fxml"));
                     break;
-                case "Senior Partner":
-                    root = javafx.fxml.FXMLLoader.load(getClass().getResource("SeniorPartnerDashboard.fxml"));
+                case "HR Manager":
+                    root = javafx.fxml.FXMLLoader.load(getClass().getResource("/mainpkg/lawfirm/turan/casemanager_dashboard.fxml"));
                     break;
             }
 

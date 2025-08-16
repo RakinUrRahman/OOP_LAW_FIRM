@@ -159,14 +159,15 @@ public class LawyerAskExpertController
     @javafx.fxml.FXML
     public void lawyerLogoutButtonOnClick(ActionEvent actionEvent) {
 
-
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainpkg/lawfirm/Login_Page.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
-            stage.setTitle("Create Case");
+            stage.setTitle("Login");
             stage.setScene(scene);
             stage.show();
+
+            ((Stage) (((Button) actionEvent.getSource()).getScene().getWindow())).close();
         } catch (IOException e) {
             e.printStackTrace();
         }
